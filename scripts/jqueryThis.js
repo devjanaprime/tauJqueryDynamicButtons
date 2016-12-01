@@ -24,7 +24,12 @@ $( document ).ready( function(){
     // loop through peeps arraay and add to document
     var outputText = $( '#outputDiv' ).html();
     for (var i = 0; i < peeps.length; i++) {
-      outputText += '<button class="testButtonClass" name="' + peeps[i] + '">' + peeps[i] + '</button>';
+      if( peeps[i] == 'Flex-Fro' ){
+        outputText += '<button class="testButtonClass btn btn-danger" name="' + peeps[i] + '">' + peeps[i] + '</button>';
+      }
+      else{
+        outputText += '<button class="testButtonClass btn btn-success" name="' + peeps[i] + '">' + peeps[i] + '</button>';
+      }
     }
     $( '#outputDiv' ).html( outputText );
   }; // end addPeeps
